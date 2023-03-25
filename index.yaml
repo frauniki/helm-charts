@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  unbound:
+  - apiVersion: v1
+    appVersion: 1.6.7
+    created: "2023-03-25T10:46:40.265167959Z"
+    description: Unbound is a fast caching DNS resolver
+    digest: 78188b85cbd90c0ba75bdcc01b959690f1d8496cca765e03018616742f8f7ab2
+    home: https://www.unbound.net/
+    name: unbound
+    sources:
+    - http://unbound.nlnetlabs.nl/svn/
+    - https://github.com/Markbnj/unbound-docker
+    - https://github.com/kubernetes/contrib/tree/master/exec-healthz
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
+    version: 1.1.5
+generated: "2023-03-25T10:46:40.265177759Z"
