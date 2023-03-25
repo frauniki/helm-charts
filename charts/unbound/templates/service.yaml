@@ -7,7 +7,18 @@ metadata:
     chart: {{ template "unbound.chart" . }}
     release: {{ .Release.Name  }}
     heritage: {{ .Release.Service }}
+    {{- with .Values.service.labels }}
+    {{- toYaml . | nindent 8 }}
+    {{- end }}
+  annotations:
+    {{- with .Values.service.annotations }}
+    {{- toYaml . | nindent 8 }}
+    {{- end }}
 spec:
+  type: {{ .Values.service.type }}
+  {{- if .Values.loadBalancerIP }}
+  loadBalancerIP: {{ .Values.loadBalancerIP }}
+  {{- end }}
   {{- if .Values.clusterIP }}
   clusterIP: {{ .Values.clusterIP }}
   {{- end }}
@@ -18,6 +29,7 @@ spec:
   selector:
     app: {{ template "unbound.name" . }}
     release: {{ .Release.Name }}
+  externalTrafficPolicy: {{ .Values.service.externalTrafficPolicy }}
   ports:
   - name: dns-udp
     protocol: UDP
