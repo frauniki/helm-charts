@@ -16,7 +16,7 @@ data:
       port: {{ .Values.unbound.serverPort }}
       so-reuseport: yes
       do-daemonize: no
-      logfile: ""
+      logfile: /dev/stdout
       use-syslog: no
       verbosity: {{ .Values.unbound.verbosity }}
       statistics-interval: {{ .Values.unbound.statsInterval }}
