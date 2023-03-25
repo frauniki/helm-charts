@@ -62,7 +62,7 @@ unbound.serverPort: 53
 
 | Property                 | Default value               |
 | ------------------------ | --------------------------- |
-| replicaCount             | 2                           |
+| replicas                 | 1                           |
 | unbound.image.repository | alpinelinux/unbound         |
 | unbound.image.tag        | latest                      |
 | unbound.image.pullPolicy | IfNotPresent                |

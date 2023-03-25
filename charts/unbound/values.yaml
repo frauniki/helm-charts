@@ -1,4 +1,4 @@
-replicaCount: 2
+replicas: 1
 
 # values that pertain to the unbound container, for more information
 # on unbound configuration see http://unbound.net/documentation/unbound.conf.html
