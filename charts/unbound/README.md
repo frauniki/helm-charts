@@ -2,10 +2,6 @@
 
 [Unbound](http://www.unbound.net) is a caching DNS resolver written in C. It is suitable for use as an upstream DNS resolver for kube-dns. The image is based on alpine and includes unbound, bind-tools and bash and is approximately 20MB in size, making for fast startup. Google's [healthz container](https://hub.docker.com/r/googlecontainer/exechealthz/) is used as a sidecar to probe the unbound container on localhost, which allows unbound to run in a default configuration with restricted network access, and still play nice with kubelet.
 
-## DEPRECATION NOTICE
-
-This chart is deprecated and no longer supported.
-
 ## Configuration
 
 The chart values file contains the default settings for the unbound server. In the default configuration unbound will allow queries from localhost only, and will not have any forward zones. This means that queries sent to the ClusterIP of the service will return access denied, and queries from localhost for anything other than the health check record `health.check.unbound` will return NXDOMAIN.
@@ -66,11 +62,9 @@ unbound.serverPort: 53
 
 | Property                 | Default value               |
 | ------------------------ | --------------------------- |
-| replicaCount             | 1                           |
-| externalIP               | ""                          |
-| clusterIP                | ""                          |
-| unbound.image.repository | markbnj/unbound-docker      |
-| unbound.image.tag        | 0.1.0                       |
+| replicaCount             | 2                           |
+| unbound.image.repository | alpinelinux/unbound         |
+| unbound.image.tag        | latest                      |
 | unbound.image.pullPolicy | IfNotPresent                |
 | unbound.verbosity        | 1                           |
 | unbound.numThreads       | 1                           |
