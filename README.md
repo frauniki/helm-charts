@@ -1,7 +1,7 @@
-# helm-charts
+# frauniki's helm-charts repository
 
 ## How to use
 
 ```
-helm repo add unbound https://frauniki.github.io/helm-charts/
+helm repo add frauniki https://frauniki.github.io/helm-charts/
 ```
