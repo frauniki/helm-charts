@@ -12,6 +12,7 @@ metadata:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
+  backoffLimit: {{ .Values.backoffLimit }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -31,7 +32,6 @@ spec:
       serviceAccountName: {{ include "migration-job.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
-      backoffLimit: {{ .Values.backoffLimit }}
       restartPolicy: {{ .Values.restartPolicy }}
       containers:
         - name: {{ .Chart.Name }}

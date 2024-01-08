@@ -43,7 +43,7 @@ securityContext:
   # runAsNonRoot: true
   # runAsUser: 1000
 
-backoffLimit: 1
+backoffLimit: 0
 restartPolicy: Never
 
 resources:
