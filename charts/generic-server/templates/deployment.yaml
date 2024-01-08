@@ -42,10 +42,10 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           {{- with .Values.command }}
-          command: {{ . }}
+          command: {{ toJson . }}
           {{- end }}
           {{- with .Values.args }}
-          args: {{ . }}
+          args: {{ toJson . }}
           {{- end }}
           ports:
             {{- toYaml .Values.ports | nindent 12 }}
