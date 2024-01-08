@@ -38,6 +38,16 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/generic-server-0.1.0/generic-server-0.1.0.tgz
     version: 0.1.0
+  migration-job:
+  - apiVersion: v2
+    created: "2024-01-08T10:01:15.870887026Z"
+    description: A Helm chart for Kubernetes
+    digest: e0d6347220c96b2d90cb6c2efeb24c9bac4b4a675c3ce71c482022b490f23f1b
+    name: migration-job
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/migration-job-0.1.0/migration-job-0.1.0.tgz
+    version: 0.1.0
   namespace:
   - apiVersion: v2
     created: "2024-01-07T16:53:32.174409201Z"
@@ -102,4 +112,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-01-08T09:46:20.818030682Z"
+generated: "2024-01-08T10:01:15.871224584Z"
