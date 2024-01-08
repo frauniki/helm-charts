@@ -1,7 +1,12 @@
 name: server
 fullname: ""
 
+kind: Deployment # Deployment, Rollout
+
 replicaCount: 1
+
+strategy:
+revisionHistoryLimit: 10
 
 image:
   repository: nginx

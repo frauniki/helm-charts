@@ -1,5 +1,5 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: {{ if eq .Values.kind "Rollout" }}argoproj.io/v1alpha1{{ else }}apps/v1{{ end }}
+kind: {{ .Values.kind }}
 metadata:
   name: {{ include "..fullname" . }}
   labels:
@@ -8,6 +8,11 @@ spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
+  {{- with .Values.strategy }}
+  strategy:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  revisionHistoryLimit: {{ .Values.revisionHistoryLimit }}
   selector:
     matchLabels:
       {{- include "..selectorLabels" . | nindent 6 }}
