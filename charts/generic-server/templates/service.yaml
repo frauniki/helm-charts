@@ -1,15 +1,19 @@
+{{- range .Values.services }}
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "..fullname" . }}
+  name: {{ default (include "..fullname" $) .name }}
   labels:
-    {{- include "..labels" . | nindent 4 }}
+    {{- include "..labels" $ | nindent 4 }}
 spec:
-  type: {{ .Values.service.type }}
+  type: {{ .type }}
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
-      name: http
+    {{- range .ports }}
+    - port: {{ .port }}
+      targetPort: {{ default "http" .targetPort }}
+      protocol: {{ default "tcp" .protocol }}
+      name: {{ default "http" .name }}
+    {{- end }}
   selector:
-    {{- include "..selectorLabels" . | nindent 4 }}
+    {{- include "..selectorLabels" $ | nindent 4 }}
+{{- end }}
