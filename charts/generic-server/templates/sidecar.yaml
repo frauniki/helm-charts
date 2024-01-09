@@ -1,0 +1,35 @@
+{{- if .Values.sidecar.enabled }}
+apiVersion: networking.istio.io/v1beta1
+kind: Sidecar
+metadata:
+  name: {{ include "..fullname" . }}
+  labels:
+    {{- include "..labels" . | nindent 4 }}
+    {{- with .Values.labels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+  {{- with .Values.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  workloadSelector:
+    labels:
+      {{- include "..selectorLabels" . | nindent 6 }}
+  {{- with .Values.sidecar.ingress }}
+  ingress:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .Values.sidecar.egress }}
+  egress:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .Values.sidecar.inboundConnectionPool }}
+  inboundConnectionPool:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .Values.sidecar.outboundTrafficPolicy }}
+  outboundTrafficPolicy:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+{{- end }}

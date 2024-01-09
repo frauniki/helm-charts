@@ -47,6 +47,15 @@ spec:
           {{- with .Values.args }}
           args: {{ toJson . }}
           {{- end }}
+          envFrom:
+          {{- with .Values.env }}
+            - configMapRef:
+                name: {{ include "..fullname" $ }}-env
+          {{- end }}
+          {{- with .Values.secretEnv }}
+            - secretRef:
+                name: {{ include "..fullname" $ }}-env
+          {{- end }}
           ports:
             {{- toYaml .Values.ports | nindent 12 }}
           {{- with .Values.livenessProbe }}

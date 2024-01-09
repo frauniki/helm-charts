@@ -1,0 +1,12 @@
+{{- with .Values.env }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "..fullname" $ }}-env
+  labels:
+    {{- include "..labels" $ | nindent 4 }}
+data:
+  {{- range $k, $v := . }}
+  {{ $k }}: {{ $v | quote }}
+  {{- end }}
+{{- end }}

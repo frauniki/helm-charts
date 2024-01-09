@@ -116,3 +116,18 @@ affinity: {}
 livenessProbe: {}
 
 readinessProbe: {}
+
+env:
+  #Key1: Value1
+  #Key2: Value2
+
+secretEnv:
+  #Key3: Value3
+
+# Add settings to istio sidecar
+sidecar:
+  enabled: false
+  ingress:
+  egress:
+  inboundConnectionPool:
+  outboundTrafficPolicy:
