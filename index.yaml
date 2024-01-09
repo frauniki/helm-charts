@@ -47,6 +47,16 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/generic-server-0.1.0/generic-server-0.1.0.tgz
     version: 0.1.0
+  istio-resources:
+  - apiVersion: v2
+    created: "2024-01-09T10:53:40.896024077Z"
+    description: A Helm chart for Kubernetes
+    digest: 334e23d371927172bee13df621ea0240cf84b0df035ac8391086aca440b9cf2d
+    name: istio-resources
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/istio-resources-0.1.0/istio-resources-0.1.0.tgz
+    version: 0.1.0
   migration-job:
   - apiVersion: v2
     created: "2024-01-09T10:27:28.269022801Z"
@@ -166,4 +176,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-01-09T10:27:28.269061142Z"
+generated: "2024-01-09T10:53:40.896055817Z"
