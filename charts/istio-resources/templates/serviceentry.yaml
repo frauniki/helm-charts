@@ -2,7 +2,7 @@
 apiVersion: networking.istio.io/v1beta1
 kind: ServiceEntry
 metadata:
-  name: {{ include "istio-resources.fullname" $ }}
+  name: {{ if .name }}{{ .name }}{{ else }}{{ include "istio-resources.fullname" $ }}{{ end }}
   labels:
     {{- include "istio-resources.labels" $ | nindent 4 }}
   {{- with $.Values.annotations }}
@@ -10,5 +10,5 @@ metadata:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
-  {{- toYaml . | nindent 2 }}
+  {{- toYaml (omit . "name") | nindent 2 }}
 {{- end }}
