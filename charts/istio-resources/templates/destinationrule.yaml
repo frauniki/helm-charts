@@ -1,14 +1,14 @@
-{{- if .Values.destinationRule.create }}
+{{- range .Values.destinationRules }}
 apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
-  name: {{ include "istio-resources.fullname" . }}
+  name: {{ include "istio-resources.fullname" $ }}
   labels:
-    {{- include "istio-resources.labels" . | nindent 4 }}
-  {{- with .Values.annotations }}
+    {{- include "istio-resources.labels" $ | nindent 4 }}
+  {{- with $.Values.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
-  {{- toYaml (omit .Values.destinationRule "create") | nindent 2 }}
+  {{- toYaml . | nindent 2 }}
 {{- end }}
