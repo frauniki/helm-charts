@@ -84,3 +84,11 @@ env:
 
 secretEnv:
   #Key3: Value3
+
+# Add settings to istio sidecar
+sidecar:
+  enabled: true
+  ingress:
+  egress:
+  inboundConnectionPool:
+  outboundTrafficPolicy:
