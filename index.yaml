@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   generic-server:
   - apiVersion: v2
+    created: "2024-01-09T12:03:32.104636407Z"
+    description: A Helm chart for Kubernetes
+    digest: c3e5cfaf30cb7fb92b1d1531cedf7218b2d5cfa0132f788b53f6bd1749ffae78
+    name: generic-server
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/generic-server-0.4.1/generic-server-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v2
     created: "2024-01-09T10:26:30.600913319Z"
     description: A Helm chart for Kubernetes
     digest: 4973e8b48a84ebecaf4f54937a1d3bdeaa37b2506d42ecde7e75187898fcdd24
@@ -48,6 +57,15 @@ entries:
     - https://github.com/frauniki/helm-charts/releases/download/generic-server-0.1.0/generic-server-0.1.0.tgz
     version: 0.1.0
   istio-resources:
+  - apiVersion: v2
+    created: "2024-01-09T12:03:32.243456918Z"
+    description: A Helm chart for Kubernetes
+    digest: f553721c5cb0e8e445d4aca7afd358647a45983408523408b0578333a71f4e13
+    name: istio-resources
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/istio-resources-0.2.2/istio-resources-0.2.2.tgz
+    version: 0.2.2
   - apiVersion: v2
     created: "2024-01-09T11:12:27.704805743Z"
     description: A Helm chart for Kubernetes
@@ -194,4 +212,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-01-09T11:12:27.704843423Z"
+generated: "2024-01-09T12:03:32.243520426Z"
