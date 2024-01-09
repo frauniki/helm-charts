@@ -49,6 +49,15 @@ entries:
     version: 0.1.0
   istio-resources:
   - apiVersion: v2
+    created: "2024-01-09T11:06:33.894835259Z"
+    description: A Helm chart for Kubernetes
+    digest: b02caf37c2990a3d49650232be9c4f78b9380f88f7351255ab0167d9a6269637
+    name: istio-resources
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/istio-resources-0.2.0/istio-resources-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     created: "2024-01-09T10:53:40.896024077Z"
     description: A Helm chart for Kubernetes
     digest: 334e23d371927172bee13df621ea0240cf84b0df035ac8391086aca440b9cf2d
@@ -176,4 +185,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-01-09T10:53:40.896055817Z"
+generated: "2024-01-09T11:06:33.894875364Z"
