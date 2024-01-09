@@ -1,0 +1,14 @@
+{{- if .Values.virtualService.create }}
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: {{ include "istio-resources.fullname" . }}
+  labels:
+    {{- include "istio-resources.labels" . | nindent 4 }}
+  {{- with .Values.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  {{- toYaml (omit .Values.virtualService "create") | nindent 2 }}
+{{- end }}

@@ -1,0 +1,66 @@
+labels:
+
+annotations:
+
+# ServiceEntry
+serviceEntry:
+  create: false
+  #hosts:
+  #  - api.dropboxapi.com
+  #  - www.googleapis.com
+  #  - api.facebook.com
+  #location: MESH_EXTERNAL
+  #ports:
+  #  - number: 443
+  #    name: https
+  #    protocol: TLS
+  #resolution: DNS
+
+# VirtualService
+virtualService:
+  create: false
+  #hosts:
+  #  - api.dropboxapi.com
+  #  - www.googleapis.com
+  #  - api.facebook.com
+  #gateways:
+  #  - mesh
+  #tls:
+  #  - match:
+  #      - port: 443
+  #        sniHosts:
+  #          - api.dropboxapi.com
+  #          - www.googleapis.com
+  #          - api.facebook.com
+  #    route:
+  #      - destination:
+  #          host: api.dropboxapi.com
+  #          port:
+  #            number: 443
+  #        weight: 100
+  #      - destination:
+  #          host: www.googleapis.com
+  #          port:
+  #            number: 443
+  #        weight: 100
+  #      - destination:
+  #          host: api.facebook.com
+  #          port:
+  #            number: 443
+  #        weight: 100
+
+# DestinationRule
+destinationRule:
+  create: false
+  #host: api.dropboxapi.com
+  #trafficPolicy:
+  #  tls:
+  #    mode: ISTIO_MUTUAL
+  #host: www.googleapis.com
+  #trafficPolicy:
+  #  tls:
+  #    mode: ISTIO_MUTUAL
+  #host: api.facebook.com
+  #trafficPolicy:
+  #  tls:
+  #    mode: ISTIO_MUTUAL

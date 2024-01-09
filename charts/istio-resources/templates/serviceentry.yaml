@@ -1,0 +1,14 @@
+{{- if .Values.serviceEntry.create }}
+apiVersion: networking.istio.io/v1beta1
+kind: ServiceEntry
+metadata:
+  name: {{ include "istio-resources.fullname" . }}
+  labels:
+    {{- include "istio-resources.labels" . | nindent 4 }}
+  {{- with .Values.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  {{- toYaml (omit .Values.serviceEntry "create") | nindent 2 }}
+{{- end }}
