@@ -45,15 +45,12 @@ spec:
           {{- with .Values.args }}
           args: {{ toJson . }}
           {{- end }}
+          envFrom:
           {{- with .Values.env }}
-          env:
-            {{- range $k, $v := . }}
-            - name: {{ $k }}
-              value: {{ $v | quote }}
-            {{- end }}
+            - configMapRef:
+                name: {{ include "migration-job.fullname" $ }}-env
           {{- end }}
           {{- with .Values.secretEnv }}
-          envFrom:
             - secretRef:
                 name: {{ include "migration-job.fullname" $ }}-env
           {{- end }}
