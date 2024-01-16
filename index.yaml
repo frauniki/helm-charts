@@ -157,6 +157,16 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/migration-job-0.1.0/migration-job-0.1.0.tgz
     version: 0.1.0
+  mysql-console:
+  - apiVersion: v2
+    created: "2024-01-16T12:39:32.718961571Z"
+    description: A Helm chart for Kubernetes
+    digest: b62b6bb3c7ee24de4178fa61f70732918885cf504f904ad4672100f85436a891
+    name: mysql-console
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/mysql-console-0.1.0/mysql-console-0.1.0.tgz
+    version: 0.1.0
   namespace:
   - apiVersion: v2
     created: "2024-01-07T16:53:32.174409201Z"
@@ -221,4 +231,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-01-09T12:27:10.030425077Z"
+generated: "2024-01-16T12:39:32.719017926Z"
