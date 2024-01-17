@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   generic-server:
   - apiVersion: v2
+    created: "2024-01-17T15:29:31.27572081Z"
+    description: A Helm chart for Kubernetes
+    digest: a9df29b29f5e3da4e0ae7ecfc33dc0b996ed99725d66d0d5d525949a88a48abc
+    name: generic-server
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/generic-server-0.4.3/generic-server-0.4.3.tgz
+    version: 0.4.3
+  - apiVersion: v2
     created: "2024-01-09T12:27:10.030357341Z"
     description: A Helm chart for Kubernetes
     digest: 6ce62f2c0143abe9f9e4b02846f151f328e86974274c698f6f6a3c6d4adf3f27
@@ -285,4 +294,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-01-17T13:49:33.601546793Z"
+generated: "2024-01-17T15:29:31.275807241Z"
