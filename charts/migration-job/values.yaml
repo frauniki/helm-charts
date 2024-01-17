@@ -93,7 +93,7 @@ sidecar:
 
 # Add settings to istio service entry
 serviceEntry:
-  enabled: true
+  enabled: false
   hosts: []
   ports: []
   location: MESH_EXTERNAL
