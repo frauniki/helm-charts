@@ -11,5 +11,5 @@ metadata:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
-  {{- toYaml (omit . "name") | nindent 2 }}
+  {{- toYaml (omit . "name" "annotations" "labels") | nindent 2 }}
 {{- end }}
