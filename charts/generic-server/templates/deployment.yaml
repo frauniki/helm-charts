@@ -1,4 +1,4 @@
-apiVersion: {{ if eq .Values.kind "Rollout" }}argoproj.io/v1alpha1{{ else }}apps/v1{{ end }}
+apiVersion: {{ include "generic-server.worklowdResourceApiVersion" . }}
 kind: {{ .Values.kind }}
 metadata:
   name: {{ include "generic-server.fullname" . }}

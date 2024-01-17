@@ -60,3 +60,11 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+
+{{/*
+Workload resource apiVersion
+*/}}
+{{- define "generic-server.worklowdResourceApiVersion" -}}
+{{- if eq .Values.kind "Rollout" }}argoproj.io/v1alpha1{{ else }}apps/v1{{ end }}
+{{- end }}
