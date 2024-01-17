@@ -104,6 +104,15 @@ entries:
     version: 0.1.0
   migration-job:
   - apiVersion: v2
+    created: "2024-01-17T13:15:47.94306022Z"
+    description: A Helm chart for Kubernetes
+    digest: 8ee455240e505ba7070f41a94d1489c57c5f3eec75925a20a799db18f0242410
+    name: migration-job
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/migration-job-0.2.3/migration-job-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v2
     created: "2024-01-17T13:13:46.992291412Z"
     description: A Helm chart for Kubernetes
     digest: bc96ad5a855d850f650a8a121f3888ab82cc658f1251f8e5575d15d19b365f16
@@ -240,4 +249,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-01-17T13:13:46.992343509Z"
+generated: "2024-01-17T13:15:47.943115573Z"
