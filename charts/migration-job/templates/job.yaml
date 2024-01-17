@@ -10,6 +10,7 @@ metadata:
   {{- with .Values.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
   {{- end }}
 spec:
   backoffLimit: {{ .Values.backoffLimit }}
