@@ -90,3 +90,11 @@ sidecar:
   egress:
   inboundConnectionPool:
   outboundTrafficPolicy:
+
+# Add settings to istio service entry
+serviceEntry:
+  enabled: true
+  hosts: []
+  ports: []
+  location: MESH_EXTERNAL
+  resolution: DNS

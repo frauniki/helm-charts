@@ -1,0 +1,27 @@
+{{- if .Values.serviceEntry.enabled }}
+apiVersion: networking.istio.io/v1beta1
+kind: ServiceEntry
+metadata:
+  name: {{ include "migration-job.fullname" . }}
+  labels:
+    {{- include "migration-job.labels" . | nindent 4 }}
+    {{- with .Values.labels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+  {{- with .Values.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+    argocd.argoproj.io/sync-wave: "-2"
+  {{- end }}
+spec:
+  {{- with .Values.serviceEntry.hosts }}
+  hosts:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .Values.serviceEntry.ports }}
+  ports:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  location: {{ .Values.serviceEntry.location }}
+  resolution: {{ .Values.serviceEntry.resolution }}
+{{- end }}
