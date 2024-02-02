@@ -1,0 +1,19 @@
+{{- if .Values.pdb.enabled }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "generic-server.fullname" . }}
+  labels:
+    {{- include "generic-server.labels" . | nindent 4 }}
+spec:
+  {{- with .Values.pdb }}
+  {{- if .maxUnavailable }}
+  maxUnavailable: {{ .maxUnavailable }}
+  {{- else }}
+  minAvailable: {{ .minAvailable }}
+  {{- end }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "generic-server.selectorLabels" $ | nindent 6 }}
+{{- end }}

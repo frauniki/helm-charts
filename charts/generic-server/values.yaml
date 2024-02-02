@@ -124,6 +124,11 @@ env:
 secretEnv:
   #Key3: Value3
 
+pdb:
+  enabled: false
+  maxUnavailable: 1
+  #minAvailable: 1
+
 # Add settings to istio sidecar
 sidecar:
   enabled: false
