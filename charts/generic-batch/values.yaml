@@ -1,6 +1,5 @@
-# Default values for generic-batch.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
+name: server
+fullname: ""
 
 kind: Job # CronJob or Job
 cronJob:
