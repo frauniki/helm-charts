@@ -268,6 +268,15 @@ entries:
     version: 0.1.0
   mysql-console:
   - apiVersion: v2
+    created: "2024-02-14T10:38:24.839891026Z"
+    description: A Helm chart for Kubernetes
+    digest: 202bc79e3a87b3d64f7fd2c69596c605cd0ce4e3b15cbd2571947a389b1918b9
+    name: mysql-console
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/mysql-console-0.2.0/mysql-console-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     created: "2024-01-16T12:39:32.718961571Z"
     description: A Helm chart for Kubernetes
     digest: b62b6bb3c7ee24de4178fa61f70732918885cf504f904ad4672100f85436a891
@@ -340,4 +349,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-02-14T08:15:38.83933324Z"
+generated: "2024-02-14T10:38:24.839961077Z"
