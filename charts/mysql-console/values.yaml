@@ -54,3 +54,11 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# Add settings to istio sidecar
+sidecar:
+  enabled: false
+  ingress:
+  egress:
+  inboundConnectionPool:
+  outboundTrafficPolicy:
