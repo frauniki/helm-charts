@@ -12,8 +12,8 @@ job:
 
 restartPolicy: OnFailure
 
-command: [echo, "Hello, World!"]
-args: []
+#command: []
+#args: []
 
 image:
   repository: alpine
