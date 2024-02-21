@@ -1,0 +1,11 @@
+url: mysql://root:pass@mysql:3306/example
+
+schemas: {}
+  #0000-init.sql: |
+  #  CREATE TABLE users (
+  #      id int,
+  #      name varchar(255)
+  #  );
+
+annotations:
+  argocd.argoproj.io/sync-wave: "-1"
