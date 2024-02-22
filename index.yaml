@@ -1,5 +1,15 @@
 apiVersion: v1
 entries:
+  atlas-schema:
+  - apiVersion: v2
+    created: "2024-02-22T10:19:18.30016338Z"
+    description: A Helm chart for Kubernetes
+    digest: b68851f9681f67851f053f9762589b39987c9e36083bf2860893405ecb49d9a0
+    name: atlas-schema
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/atlas-schema-0.1.0/atlas-schema-0.1.0.tgz
+    version: 0.1.0
   generic-batch:
   - apiVersion: v2
     created: "2024-02-14T08:15:38.839274911Z"
@@ -349,4 +359,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-02-14T10:38:24.839961077Z"
+generated: "2024-02-22T10:19:18.300266001Z"
