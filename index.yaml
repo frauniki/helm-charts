@@ -10,6 +10,17 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/atlas-migration-0.1.0/atlas-migration-0.1.0.tgz
     version: 0.1.0
+  atlas-operator:
+  - apiVersion: v2
+    appVersion: 0.4.1
+    created: "2024-02-22T12:04:37.507992444Z"
+    description: The Atlas Kubernetes Operator
+    digest: 2ee7f4b33eeffd6bccd1fe5dc459ba3c70e1af08afe51204f83b9e8b87815d48
+    name: atlas-operator
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/atlas-operator-0.4.1/atlas-operator-0.4.1.tgz
+    version: 0.4.1
   atlas-schema:
   - apiVersion: v2
     created: "2024-02-22T10:19:18.30016338Z"
@@ -369,4 +380,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-02-22T10:27:44.860103656Z"
+generated: "2024-02-22T12:04:37.508075509Z"
