@@ -1,5 +1,15 @@
 apiVersion: v1
 entries:
+  atlas-migration:
+  - apiVersion: v2
+    created: "2024-02-22T10:27:44.860028826Z"
+    description: A Helm chart for Kubernetes
+    digest: 54e1768dd1b9b82edaa62ad3dcdb39bdce2183f7dd0b343032b1dc66a9f1f891
+    name: atlas-migration
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/atlas-migration-0.1.0/atlas-migration-0.1.0.tgz
+    version: 0.1.0
   atlas-schema:
   - apiVersion: v2
     created: "2024-02-22T10:19:18.30016338Z"
@@ -359,4 +369,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-02-22T10:19:18.300266001Z"
+generated: "2024-02-22T10:27:44.860103656Z"
