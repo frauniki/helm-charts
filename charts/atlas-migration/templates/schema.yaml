@@ -1,0 +1,14 @@
+apiVersion: db.atlasgo.io/v1alpha1
+kind: AtlasMigration
+metadata:
+  name: {{ include "atlas-migration.fullname" . }}
+  annotations: {{ .Values.annotations | toYaml | nindent 4 }}
+  labels: {{- include "atlas-migration.labels" . | nindent 4 }}
+spec:
+  urlFrom:
+    secretKeyRef:
+      name: {{ include "atlas-migration.secretName" . }}
+      key: url
+  dir:
+    configMapRef:
+      name: {{ include "atlas-migration.configMapName" . }}
