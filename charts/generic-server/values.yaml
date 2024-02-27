@@ -136,3 +136,5 @@ sidecar:
   egress:
   inboundConnectionPool:
   outboundTrafficPolicy:
+
+topologySpreadConstraints: []
