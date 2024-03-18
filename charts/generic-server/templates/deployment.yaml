@@ -70,15 +70,6 @@ spec:
           {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          topologySpreadConstraints:
-          {{- range .Values.topologySpreadConstraints }}
-            - maxSkew: {{ .maxSkew }}
-              topologyKey: {{ .topologyKey }}
-              whenUnsatisfiable: {{ .whenUnsatisfiable }}
-              labelSelector:
-                matchLabels:
-                  {{- include "generic-server.selectorLabels" $ | nindent 18 }}
-          {{- end }}
           {{- with .Values.volumeMounts }}
           volumeMounts:
             {{- toYaml . | nindent 12 }}
@@ -98,4 +89,13 @@ spec:
       {{- with .Values.tolerations }}
       tolerations:
         {{- toYaml . | nindent 8 }}
+      {{- end }}
+      topologySpreadConstraints:
+      {{- range .Values.topologySpreadConstraints }}
+        - maxSkew: {{ .maxSkew }}
+          topologyKey: {{ .topologyKey }}
+          whenUnsatisfiable: {{ .whenUnsatisfiable }}
+          labelSelector:
+            matchLabels:
+              {{- include "generic-server.selectorLabels" $ | nindent 14 }}
       {{- end }}
