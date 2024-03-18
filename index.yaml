@@ -33,6 +33,15 @@ entries:
     version: 0.1.0
   generic-batch:
   - apiVersion: v2
+    created: "2024-03-18T11:36:17.411038482Z"
+    description: A Helm chart for Kubernetes
+    digest: 249dd0f4bff5cc3b1289ae9b42e70e10e3b1c2d8309ac2f6bef86db01abc2b38
+    name: generic-batch
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/generic-batch-0.4.0/generic-batch-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
     created: "2024-02-14T08:15:38.839274911Z"
     description: A Helm chart for Kubernetes
     digest: 6a536b05096c31d2937dc77221dfe79e538b9ed25c72971e68c1a7e5628ca097
@@ -389,4 +398,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-02-27T10:58:36.993717606Z"
+generated: "2024-03-18T11:36:17.411107591Z"
