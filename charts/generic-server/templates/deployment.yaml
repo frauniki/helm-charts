@@ -77,7 +77,7 @@ spec:
               whenUnsatisfiable: {{ .whenUnsatisfiable }}
               labelSelector:
                 matchLabels:
-                  {{- include "generic-server.selectorLabels" $ | nindent 8 }}
+                  {{- include "generic-server.selectorLabels" $ | nindent 18 }}
           {{- end }}
           {{- with .Values.volumeMounts }}
           volumeMounts:
