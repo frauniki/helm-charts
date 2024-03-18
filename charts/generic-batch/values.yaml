@@ -7,8 +7,8 @@ cronJob:
   schedule: "*/1 * * * *"
   successfulJobsHistoryLimit: 3
   failedJobsHistoryLimit: 1
-job:
-  backoffLimit: 3
+
+backoffLimit: 3
 
 restartPolicy: OnFailure
 

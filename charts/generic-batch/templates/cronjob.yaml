@@ -18,6 +18,7 @@ spec:
   {{- end }}
   jobTemplate:
     spec:
+      backoffLimit: {{ .Values.backoffLimit }}
       template:
         metadata:
           {{- with .Values.podAnnotations }}
