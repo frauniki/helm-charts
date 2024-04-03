@@ -16,6 +16,6 @@ spec:
     {{- if .Values.autoscaling.totalNumberOfQueuedAndInProgressWorkflowRuns }}
     - type: TotalNumberOfQueuedAndInProgressWorkflowRuns
       repositoryNames:
-        - {{ .Values.repository }}
+        - {{ splitList "/" .Values.repository | last }}
     {{- end }}
 {{- end }}
