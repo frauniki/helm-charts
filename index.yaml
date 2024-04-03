@@ -1,5 +1,15 @@
 apiVersion: v1
 entries:
+  actions-runner:
+  - apiVersion: v2
+    created: "2024-04-03T11:34:37.191684016Z"
+    description: A Helm chart for Kubernetes
+    digest: 7d1dc49cdcf196c63ce2b39b9c4cd541fd83b7cc2030f6e03968ceab29262f76
+    name: actions-runner
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/actions-runner-0.1.0/actions-runner-0.1.0.tgz
+    version: 0.1.0
   atlas-migration:
   - apiVersion: v2
     created: "2024-02-22T10:27:44.860028826Z"
@@ -416,4 +426,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-03-18T12:09:10.673114525Z"
+generated: "2024-04-03T11:34:37.191765027Z"
