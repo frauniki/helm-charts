@@ -9,7 +9,7 @@ spec:
     spec:
       {{- with .Values.labels }}
       labels:
-        {{- .Values.labels | toYaml | nindent 8 }}
+        {{- . | toYaml | nindent 8 }}
       {{- end }}
       envFrom:
       {{- with .Values.env }}
