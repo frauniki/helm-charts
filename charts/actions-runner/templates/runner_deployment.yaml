@@ -1,0 +1,25 @@
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: RunnerDeployment
+metadata:
+  name: {{ include "actions-runner.fullname" . }}
+  labels:
+    {{- include "actions-runner.labels" . | nindent 4 }}
+spec:
+  template:
+    spec:
+      {{- with .Values.labels }}
+      labels:
+        {{- .Values.labels | toYaml | nindent 8 }}
+      {{- end }}
+      envFrom:
+      {{- with .Values.env }}
+        - configMapRef:
+            name: {{ include "actions-runner.fullname" $ }}-env
+      {{- end }}
+      {{- with .Values.secretEnv }}
+        - secretRef:
+            name: {{ include "actions-runner.fullname" $ }}-env
+      {{- end }}
+      resources:
+        {{- toYaml .Values.resources | nindent 8 }}
+      repository: {{ .Values.repository }}

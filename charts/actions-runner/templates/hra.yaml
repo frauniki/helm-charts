@@ -1,0 +1,21 @@
+{{- if .Values.autoscaling.enabled }}
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: HorizontalRunnerAutoscaler
+metadata:
+  name: {{ include "actions-runner.fullname" . }}
+  labels:
+    {{- include "actions-runner.labels" . | nindent 4 }}
+spec:
+  scaleDownDelaySecondsAfterScaleOut: {{ .Values.autoscaling.scaleDownDelaySecondsAfterScaleOut }}
+  scaleTargetRef:
+    kind: RunnerDeployment
+    name: {{ include "actions-runner.fullname" . }}
+  minReplicas: {{ .Values.autoscaling.minReplicas }}
+  maxReplicas: {{ .Values.autoscaling.maxReplicas }}
+  metrics:
+    {{- if .Values.autoscaling.totalNumberOfQueuedAndInProgressWorkflowRuns }}
+    - type: TotalNumberOfQueuedAndInProgressWorkflowRuns
+      repositoryNames:
+        - {{ .Values.repository }}
+    {{- end }}
+{{- end }}
