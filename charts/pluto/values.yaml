@@ -1,0 +1,19 @@
+cronJob:
+  suspend: false
+  schedule: "0 0 * * *"
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 1
+
+image:
+  repository: us-docker.pkg.dev/fairwinds-ops/oss/pluto
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+
+serviceAccount:
+  create: true
+  automount: true
+  annotations: {}
+  name: ""
+
+resources: {}
