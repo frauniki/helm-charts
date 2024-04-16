@@ -390,6 +390,17 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/namespace-0.1.0/namespace-0.1.0.tgz
     version: 0.1.0
+  pluto:
+  - apiVersion: v2
+    appVersion: 5.19.0
+    created: "2024-04-16T14:45:39.682116513Z"
+    description: A Helm chart for Kubernetes
+    digest: a7eb4a3fb40e8009c4e769680a95b2fc12d9efff7165e9b8cb1defa451033b50
+    name: pluto
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/pluto-0.1.0/pluto-0.1.0.tgz
+    version: 0.1.0
   unbound:
   - apiVersion: v2
     appVersion: 0.0.0
@@ -444,4 +455,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-04-03T11:45:45.998791855Z"
+generated: "2024-04-16T14:45:39.682212662Z"
