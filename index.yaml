@@ -261,6 +261,16 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/istio-resources-0.1.0/istio-resources-0.1.0.tgz
     version: 0.1.0
+  karpenter-aws-provisoner:
+  - apiVersion: v2
+    created: "2024-04-18T11:42:18.821364151Z"
+    description: A Helm chart for Kubernetes
+    digest: 30e3d10c85865997bbc19549f4a20f09015b79e99a8eafccbb17880a16b50cff
+    name: karpenter-aws-provisoner
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/karpenter-aws-provisoner-0.1.0/karpenter-aws-provisoner-0.1.0.tgz
+    version: 0.1.0
   migration-job:
   - apiVersion: v2
     created: "2024-01-17T13:49:33.601476172Z"
@@ -465,4 +475,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-04-17T13:15:11.200953666Z"
+generated: "2024-04-18T11:42:18.821493772Z"
