@@ -1,0 +1,7 @@
+apiVersion: v2
+name: thanos-querier
+description: |
+  A Helm chart for Thanos Querier
+type: application
+version: 0.1.0
+appVersion: 0.35.0
