@@ -424,6 +424,16 @@ entries:
   thanos-querier:
   - apiVersion: v2
     appVersion: 0.35.0
+    created: "2024-05-23T12:23:54.440354149Z"
+    description: 'A Helm chart for Thanos Querier '
+    digest: b5b628f85a1f325fa6bb664b82df140f3841c921aaeb3e7fdddfe44858c6660d
+    name: thanos-querier
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/thanos-querier-0.1.1/thanos-querier-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.35.0
     created: "2024-05-23T12:08:50.299381469Z"
     description: 'A Helm chart for Thanos Querier '
     digest: b6524807bc0d598abd74ff8c0a6912809c386c869836a360d7a6909b73dcf926
@@ -486,4 +496,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-05-23T12:08:50.29947859Z"
+generated: "2024-05-23T12:23:54.44051473Z"
