@@ -421,6 +421,17 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/pluto-0.1.0/pluto-0.1.0.tgz
     version: 0.1.0
+  thanos-querier:
+  - apiVersion: v2
+    appVersion: 0.35.0
+    created: "2024-05-23T12:08:50.299381469Z"
+    description: 'A Helm chart for Thanos Querier '
+    digest: b6524807bc0d598abd74ff8c0a6912809c386c869836a360d7a6909b73dcf926
+    name: thanos-querier
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/thanos-querier-0.1.0/thanos-querier-0.1.0.tgz
+    version: 0.1.0
   unbound:
   - apiVersion: v2
     appVersion: 0.0.0
@@ -475,4 +486,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-04-18T11:42:18.821493772Z"
+generated: "2024-05-23T12:08:50.29947859Z"
