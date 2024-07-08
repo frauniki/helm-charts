@@ -61,6 +61,15 @@ entries:
     version: 0.1.0
   generic-batch:
   - apiVersion: v2
+    created: "2024-07-08T13:38:12.951545365Z"
+    description: A Helm chart for Kubernetes
+    digest: 97849a0b7c103385b34ffacf2636082f4bf9cdd8aff7b22d9b941604eee01497
+    name: generic-batch
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/generic-batch-0.5.0/generic-batch-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
     created: "2024-03-18T11:36:17.411038482Z"
     description: A Helm chart for Kubernetes
     digest: 249dd0f4bff5cc3b1289ae9b42e70e10e3b1c2d8309ac2f6bef86db01abc2b38
@@ -106,6 +115,15 @@ entries:
     - https://github.com/frauniki/helm-charts/releases/download/generic-batch-0.2.0/generic-batch-0.2.0.tgz
     version: 0.2.0
   generic-server:
+  - apiVersion: v2
+    created: "2024-07-08T13:38:13.093184585Z"
+    description: A Helm chart for Kubernetes
+    digest: 428b60b9f852726b570e124dc56101ac619ab870d2b53fed386cb7708ee920b6
+    name: generic-server
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/generic-server-0.7.0/generic-server-0.7.0.tgz
+    version: 0.7.0
   - apiVersion: v2
     created: "2024-03-18T12:09:10.672974532Z"
     description: A Helm chart for Kubernetes
@@ -217,6 +235,15 @@ entries:
     version: 0.1.0
   istio-resources:
   - apiVersion: v2
+    created: "2024-07-08T13:38:13.24610256Z"
+    description: A Helm chart for Kubernetes
+    digest: e47c5495ffa44f419a25cf9f89a483b0e833ccf65b520414c6259700ec4307b5
+    name: istio-resources
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/istio-resources-0.3.0/istio-resources-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
     created: "2024-01-17T13:35:22.474224796Z"
     description: A Helm chart for Kubernetes
     digest: 9db56666b5ddfa622c2eb426cd7d2bf5cc7c976357c82bac42a426c5b4879f70
@@ -281,6 +308,15 @@ entries:
     - https://github.com/frauniki/helm-charts/releases/download/karpenter-aws-provisoner-0.1.0/karpenter-aws-provisoner-0.1.0.tgz
     version: 0.1.0
   migration-job:
+  - apiVersion: v2
+    created: "2024-07-08T13:38:13.411424088Z"
+    description: A Helm chart for Kubernetes
+    digest: 3c5bfe05e417543fa94df2c8672e95212b23e9c54b5fd12279634f116e4b261d
+    name: migration-job
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/migration-job-0.4.0/migration-job-0.4.0.tgz
+    version: 0.4.0
   - apiVersion: v2
     created: "2024-01-17T13:49:33.601476172Z"
     description: A Helm chart for Kubernetes
@@ -381,6 +417,15 @@ entries:
     - https://github.com/frauniki/helm-charts/releases/download/migration-job-0.1.0/migration-job-0.1.0.tgz
     version: 0.1.0
   mysql-console:
+  - apiVersion: v2
+    created: "2024-07-08T13:38:13.567753681Z"
+    description: A Helm chart for Kubernetes
+    digest: 62c7453eb7873d4262338fc36d74bbd6541d340d7a8860cf9db914b3284c0b02
+    name: mysql-console
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/mysql-console-0.3.0/mysql-console-0.3.0.tgz
+    version: 0.3.0
   - apiVersion: v2
     created: "2024-02-14T10:38:24.839891026Z"
     description: A Helm chart for Kubernetes
@@ -505,4 +550,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-06-13T11:00:02.761643481Z"
+generated: "2024-07-08T13:38:13.567966208Z"
