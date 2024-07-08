@@ -1,6 +1,6 @@
 {{- range .Values.serviceEntries }}
 ---
-apiVersion: networking.istio.io/v1beta1
+apiVersion: networking.istio.io/v1
 kind: ServiceEntry
 metadata:
   name: {{ if .name }}{{ .name }}{{ else }}{{ include "istio-resources.fullname" $ }}{{ end }}
