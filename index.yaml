@@ -290,6 +290,15 @@ entries:
     version: 0.1.0
   karpenter-aws-provisoner:
   - apiVersion: v2
+    created: "2025-07-10T16:00:38.033634297Z"
+    description: A Helm chart for Kubernetes
+    digest: 8dcf5b41dfbf5bfbe9f7bf2b1eb9253035d5638265545d8c4cb702ea3bcd80af
+    name: karpenter-aws-provisoner
+    type: application
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/karpenter-aws-provisoner-0.2.0/karpenter-aws-provisoner-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     created: "2024-06-13T11:00:02.761542102Z"
     description: A Helm chart for Kubernetes
     digest: 4a66de59867c722ee18df658bdda0ce737076ee6fa88f07a865651c6589d838c
@@ -550,4 +559,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2024-07-08T13:38:13.567966208Z"
+generated: "2025-07-10T16:00:38.033783806Z"
