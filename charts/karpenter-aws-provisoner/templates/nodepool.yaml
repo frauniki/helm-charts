@@ -16,9 +16,16 @@ spec:
   weight: {{ .weight }}
   template:
     spec:
+      {{- if $.Values.ec2NodeClass.create }}
       nodeClassRef:
         name: {{ include "karpenter-aws-provisoner.fullname" $ }}
+      {{- else }}
+      nodeClassRef: {{ toYaml $.Values.ec2NodeClass | nindent 6 }}
+      {{- end }}
       requirements: {{ .requirements | toYaml | nindent 6 }}
+      {{- with .expireAfter }}
+      expireAfter: {{ . }}
+      {{- end }}
       {{- with .kubelet }}
       kubelet: {{ . | toYaml | nindent 8 }}
       {{- end }}
