@@ -28,3 +28,5 @@ nodePools:
       expireAfter: 168h
       consolidationPolicy: WhenEmpty
       consolidateAfter: 30s
+    nodeClassRef:
+      name: ""

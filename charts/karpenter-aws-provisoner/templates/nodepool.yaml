@@ -20,7 +20,7 @@ spec:
       nodeClassRef:
         name: {{ include "karpenter-aws-provisoner.fullname" $ }}
       {{- else }}
-      nodeClassRef: {{ toYaml $.Values.ec2NodeClass | nindent 6 }}
+      nodeClassRef: {{ toYaml .nodeClassRef | nindent 8 }}
       {{- end }}
       requirements: {{ .requirements | toYaml | nindent 6 }}
       {{- with .expireAfter }}
