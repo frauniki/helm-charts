@@ -1,6 +1,6 @@
 {{- range .Values.nodePools }}
 ---
-apiVersion: karpenter.sh/v1beta1
+apiVersion: karpenter.sh/v1
 kind: NodePool
 metadata:
   name: {{ include "karpenter-aws-provisoner.fullname" $ }}{{ if .name }}-{{ .name }}{{ end }}
