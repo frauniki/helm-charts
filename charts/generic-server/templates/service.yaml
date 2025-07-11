@@ -12,7 +12,7 @@ spec:
     {{- range .ports }}
     - port: {{ .port }}
       targetPort: {{ default "http" .targetPort }}
-      protocol: {{ default "tcp" .protocol }}
+      protocol: {{ default "TCP" .protocol }}
       name: {{ default "http" .name }}
     {{- end }}
   selector:
