@@ -1,0 +1,13 @@
+apiVersion: v2
+name: envoy-proxy
+description: A Helm chart for Envoy Gateway EnvoyProxy configuration
+version: 0.1.0
+keywords:
+  - envoy-gateway
+  - envoy-proxy
+  - gateway-api
+  - networking
+sources:
+  - https://github.com/envoyproxy/gateway
+maintainers:
+  - name: frauniki

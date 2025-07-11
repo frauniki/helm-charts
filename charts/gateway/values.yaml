@@ -1,0 +1,52 @@
+# Default values for gateway.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# GatewayClass reference
+gatewayClassName: ""
+
+# Listeners configuration
+listeners:
+  - name: http
+    protocol: HTTP
+    port: 80
+    hostname: ""
+    # allowedRoutes:
+    #   namespaces:
+    #     from: All  # All, Same, Selector
+    #     selector:
+    #       matchLabels: {}
+    #       matchExpressions: []
+    #   kinds:
+    #     - kind: HTTPRoute
+    #       group: gateway.networking.k8s.io
+    # tls:
+    #   mode: Terminate
+    #   certificateRefs:
+    #     - name: my-cert
+    #       namespace: default
+    #       kind: Secret
+    #       group: ""
+    #   options: {}
+
+# Addresses configuration
+addresses: []
+# - type: IPAddress
+#   value: "192.168.1.1"
+# - type: Hostname
+#   value: "gateway.example.com"
+# - type: NamedAddress
+#   value: "my-address"
+
+# Infrastructure configuration
+infrastructure: {}
+# labels: {}
+# annotations: {}
+# parametersRef:
+#   group: ""
+#   kind: ""
+#   name: ""
+#   namespace: ""
+
+# Additional annotations for Gateway
+annotations: {}

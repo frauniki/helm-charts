@@ -1,0 +1,12 @@
+apiVersion: v2
+name: gateway-class
+description: A Helm chart for Kubernetes Gateway API GatewayClass
+version: 0.1.0
+keywords:
+  - gateway-api
+  - gateway-class
+  - networking
+sources:
+  - https://github.com/kubernetes-sigs/gateway-api
+maintainers:
+  - name: frauniki

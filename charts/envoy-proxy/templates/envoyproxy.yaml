@@ -1,0 +1,35 @@
+apiVersion: config.gateway.envoyproxy.io/v1alpha1
+kind: EnvoyProxy
+metadata:
+  name: {{ include "envoy-proxy.fullname" . }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    {{- include "envoy-proxy.labels" . | nindent 4 }}
+  {{- with .Values.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  {{- with .Values.provider }}
+  provider:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .Values.bootstrap }}
+  bootstrap:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- if .Values.concurrency }}
+  concurrency: {{ .Values.concurrency }}
+  {{- end }}
+  {{- with .Values.extraArgs }}
+  extraArgs:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .Values.telemetry }}
+  telemetry:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .Values.shutdown }}
+  shutdown:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}

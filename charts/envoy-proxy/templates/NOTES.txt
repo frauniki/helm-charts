@@ -1,0 +1,16 @@
+1. Get the EnvoyProxy details by running these commands:
+{{- $fullName := include "envoy-proxy.fullname" . }}
+  kubectl describe envoyproxy {{ $fullName }} -n {{ .Values.namespace }}
+
+2. Check the EnvoyProxy status:
+  kubectl get envoyproxy {{ $fullName }} -n {{ .Values.namespace }} -o jsonpath='{.status}'
+
+3. Provider type: {{ .Values.provider.type }}
+
+{{- if .Values.provider.kubernetes.envoyDeployment.replicas }}
+4. Envoy deployment replicas: {{ .Values.provider.kubernetes.envoyDeployment.replicas }}
+{{- end }}
+
+{{- if .Values.provider.kubernetes.envoyService.type }}
+5. Envoy service type: {{ .Values.provider.kubernetes.envoyService.type }}
+{{- end }}

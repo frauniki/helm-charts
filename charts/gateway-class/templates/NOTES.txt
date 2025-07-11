@@ -1,0 +1,14 @@
+1. Get the GatewayClass details by running these commands:
+{{- $fullName := include "gateway-class.fullname" . }}
+  kubectl describe gatewayclass {{ $fullName }}
+
+2. Check the GatewayClass status:
+  kubectl get gatewayclass {{ $fullName }} -o jsonpath='{.status.conditions[*]}'
+
+3. Controller name for this GatewayClass:
+  {{ .Values.controllerName }}
+
+{{- if .Values.description }}
+4. Description:
+  {{ .Values.description }}
+{{- end }}

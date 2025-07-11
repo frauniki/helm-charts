@@ -1,0 +1,12 @@
+apiVersion: v2
+name: gateway
+description: A Helm chart for Kubernetes Gateway API Gateway
+version: 0.1.0
+keywords:
+  - gateway-api
+  - gateway
+  - networking
+sources:
+  - https://github.com/kubernetes-sigs/gateway-api
+maintainers:
+  - name: frauniki

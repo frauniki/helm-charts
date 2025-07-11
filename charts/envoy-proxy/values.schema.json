@@ -1,0 +1,206 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "namespace": {
+      "type": "string",
+      "description": "Namespace where EnvoyProxy will be created",
+      "default": "envoy-gateway-system"
+    },
+    "provider": {
+      "type": "object",
+      "description": "Provider configuration",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["Kubernetes"],
+          "description": "Provider type"
+        },
+        "kubernetes": {
+          "type": "object",
+          "description": "Kubernetes-specific configuration",
+          "properties": {
+            "envoyDeployment": {
+              "type": "object",
+              "description": "Envoy deployment configuration",
+              "properties": {
+                "replicas": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "description": "Number of Envoy replicas"
+                },
+                "pod": {
+                  "type": "object",
+                  "description": "Pod-level configuration",
+                  "properties": {
+                    "annotations": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      }
+                    },
+                    "labels": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      }
+                    },
+                    "affinity": {
+                      "type": "object"
+                    },
+                    "tolerations": {
+                      "type": "array"
+                    },
+                    "securityContext": {
+                      "type": "object"
+                    },
+                    "volumes": {
+                      "type": "array"
+                    },
+                    "initContainers": {
+                      "type": "array"
+                    }
+                  }
+                },
+                "container": {
+                  "type": "object",
+                  "description": "Container-level configuration",
+                  "properties": {
+                    "env": {
+                      "type": "array"
+                    },
+                    "image": {
+                      "type": "string"
+                    },
+                    "resources": {
+                      "type": "object"
+                    },
+                    "securityContext": {
+                      "type": "object"
+                    },
+                    "volumeMounts": {
+                      "type": "array"
+                    }
+                  }
+                }
+              }
+            },
+            "envoyService": {
+              "type": "object",
+              "description": "Envoy service configuration",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["LoadBalancer", "NodePort", "ClusterIP"],
+                  "description": "Service type"
+                },
+                "annotations": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "loadBalancerClass": {
+                  "type": "string"
+                },
+                "allocateLoadBalancerNodePorts": {
+                  "type": "boolean"
+                },
+                "loadBalancerSourceRanges": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "externalTrafficPolicy": {
+                  "type": "string",
+                  "enum": ["Local", "Cluster"]
+                }
+              }
+            },
+            "envoyHpa": {
+              "type": "object",
+              "description": "Horizontal Pod Autoscaler configuration",
+              "properties": {
+                "minReplicas": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "maxReplicas": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "metrics": {
+                  "type": "array"
+                },
+                "behavior": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "bootstrap": {
+      "type": "object",
+      "description": "Bootstrap configuration"
+    },
+    "concurrency": {
+      "type": "integer",
+      "description": "Concurrency configuration",
+      "minimum": 0
+    },
+    "extraArgs": {
+      "type": "array",
+      "description": "Extra arguments for Envoy",
+      "items": {
+        "type": "string"
+      }
+    },
+    "telemetry": {
+      "type": "object",
+      "description": "Telemetry configuration",
+      "properties": {
+        "metrics": {
+          "type": "object",
+          "properties": {
+            "prometheus": {
+              "type": "object",
+              "properties": {
+                "disable": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "sinks": {
+              "type": "array"
+            }
+          }
+        },
+        "accessLog": {
+          "type": "object",
+          "properties": {
+            "disable": {
+              "type": "boolean"
+            },
+            "settings": {
+              "type": "array"
+            }
+          }
+        }
+      }
+    },
+    "shutdown": {
+      "type": "object",
+      "description": "Shutdown configuration"
+    },
+    "annotations": {
+      "type": "object",
+      "description": "Additional annotations for the EnvoyProxy resource",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  }
+}

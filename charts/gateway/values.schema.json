@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "required": ["gatewayClassName"],
+  "properties": {
+    "gatewayClassName": {
+      "type": "string",
+      "description": "Name of the GatewayClass resource"
+    },
+    "listeners": {
+      "type": "array",
+      "description": "List of listeners for this Gateway",
+      "items": {
+        "type": "object",
+        "required": ["name", "protocol", "port"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the listener"
+          },
+          "protocol": {
+            "type": "string",
+            "enum": ["HTTP", "HTTPS", "TLS", "TCP", "UDP"],
+            "description": "Protocol for the listener"
+          },
+          "port": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 65535,
+            "description": "Port number for the listener"
+          },
+          "hostname": {
+            "type": "string",
+            "description": "Hostname for the listener"
+          },
+          "allowedRoutes": {
+            "type": "object",
+            "description": "Routes allowed to attach to this listener"
+          },
+          "tls": {
+            "type": "object",
+            "description": "TLS configuration for the listener"
+          }
+        }
+      }
+    },
+    "addresses": {
+      "type": "array",
+      "description": "Addresses requested for this Gateway",
+      "items": {
+        "type": "object",
+        "required": ["type", "value"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["IPAddress", "Hostname", "NamedAddress"],
+            "description": "Type of address"
+          },
+          "value": {
+            "type": "string",
+            "description": "Value of the address"
+          }
+        }
+      }
+    },
+    "infrastructure": {
+      "type": "object",
+      "description": "Infrastructure-specific configuration"
+    },
+    "annotations": {
+      "type": "object",
+      "description": "Additional annotations for the Gateway resource",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  }
+}

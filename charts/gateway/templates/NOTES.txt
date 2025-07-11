@@ -1,0 +1,16 @@
+1. Get the Gateway details by running these commands:
+{{- $fullName := include "gateway.fullname" . }}
+  kubectl describe gateway {{ $fullName }} -n {{ .Release.Namespace }}
+
+2. Check the Gateway status:
+  kubectl get gateway {{ $fullName }} -n {{ .Release.Namespace }} -o jsonpath='{.status.conditions[*]}'
+
+3. List the Gateway listeners:
+  kubectl get gateway {{ $fullName }} -n {{ .Release.Namespace }} -o jsonpath='{.spec.listeners[*].name}'
+
+{{- if .Values.addresses }}
+4. The Gateway is configured with the following addresses:
+  {{- range .Values.addresses }}
+  - Type: {{ .type }}, Value: {{ .value }}
+  {{- end }}
+{{- end }}

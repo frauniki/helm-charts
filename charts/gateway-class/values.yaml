@@ -1,0 +1,19 @@
+# Default values for gateway-class.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# Controller name for the GatewayClass
+controllerName: ""
+
+# Description of the GatewayClass
+description: ""
+
+# Parameters reference
+parametersRef: {}
+# group: ""
+# kind: ""
+# name: ""
+# namespace: ""
+
+# Additional annotations for GatewayClass
+annotations: {}

@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "required": ["controllerName"],
+  "properties": {
+    "controllerName": {
+      "type": "string",
+      "description": "The name of the controller that implements this GatewayClass"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the GatewayClass"
+    },
+    "parametersRef": {
+      "type": "object",
+      "description": "Reference to a resource that contains the configuration for this GatewayClass",
+      "properties": {
+        "group": {
+          "type": "string",
+          "description": "Group of the referent"
+        },
+        "kind": {
+          "type": "string",
+          "description": "Kind of the referent"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the referent"
+        },
+        "namespace": {
+          "type": "string",
+          "description": "Namespace of the referent"
+        }
+      },
+      "required": ["name"]
+    },
+    "annotations": {
+      "type": "object",
+      "description": "Additional annotations for the GatewayClass resource",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  }
+}
