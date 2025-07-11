@@ -242,6 +242,23 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/generic-server-0.1.0/generic-server-0.1.0.tgz
     version: 0.1.0
+  http-route:
+  - apiVersion: v2
+    created: "2025-07-11T19:56:14.25801318Z"
+    description: A Helm chart for Kubernetes Gateway API HTTPRoute
+    digest: 6ef07cb23a80858894270a3b054b3f419e5bbdbe6b75e8f609db4b24a630dc91
+    keywords:
+    - gateway-api
+    - httproute
+    - networking
+    maintainers:
+    - name: frauniki
+    name: http-route
+    sources:
+    - https://github.com/kubernetes-sigs/gateway-api
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/http-route-0.1.0/http-route-0.1.0.tgz
+    version: 0.1.0
   istio-resources:
   - apiVersion: v2
     created: "2024-07-08T13:38:13.24610256Z"
@@ -586,4 +603,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2025-07-11T19:10:55.797879914Z"
+generated: "2025-07-11T19:56:14.258140198Z"
