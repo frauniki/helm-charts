@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "parentRefs": {
+      "type": "array",
+      "description": "References to the Gateway resources that this HTTPRoute should attach to",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the Gateway"
+          },
+          "namespace": {
+            "type": "string",
+            "description": "Namespace of the Gateway"
+          },
+          "sectionName": {
+            "type": "string",
+            "description": "Section name of the Gateway"
+          },
+          "port": {
+            "type": ["string", "integer"],
+            "description": "Port of the Gateway"
+          }
+        },
+        "required": ["name"]
+      }
+    },
+    "hostnames": {
+      "type": "array",
+      "description": "List of hostnames that this HTTPRoute should match",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rules": {
+      "type": "array",
+      "description": "List of rules for routing traffic",
+      "items": {
+        "type": "object",
+        "properties": {
+          "matches": {
+            "type": "array",
+            "description": "List of matches for this rule",
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": ["Exact", "PathPrefix", "RegularExpression"],
+                      "description": "Type of path match"
+                    },
+                    "value": {
+                      "type": "string",
+                      "description": "Path value to match"
+                    }
+                  }
+                },
+                "headers": {
+                  "type": "array",
+                  "description": "List of header matches",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "value": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "queryParams": {
+                  "type": "array",
+                  "description": "List of query parameter matches",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "value": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "method": {
+                  "type": "string",
+                  "description": "HTTP method to match",
+                  "enum": [
+                    "GET",
+                    "HEAD",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "CONNECT",
+                    "OPTIONS",
+                    "TRACE",
+                    "PATCH",
+                    ""
+                  ]
+                }
+              }
+            }
+          },
+          "filters": {
+            "type": "array",
+            "description": "List of filters to apply",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "RequestHeaderModifier",
+                    "ResponseHeaderModifier",
+                    "RequestMirror",
+                    "RequestRedirect",
+                    "URLRewrite",
+                    "ExtensionRef"
+                  ]
+                }
+              }
+            }
+          },
+          "backendRefs": {
+            "type": "array",
+            "description": "List of backend references",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Name of the backend service"
+                },
+                "namespace": {
+                  "type": "string",
+                  "description": "Namespace of the backend service"
+                },
+                "port": {
+                  "type": "integer",
+                  "description": "Port of the backend service"
+                },
+                "weight": {
+                  "type": "integer",
+                  "description": "Weight for load balancing",
+                  "minimum": 0,
+                  "maximum": 1000000
+                },
+                "filters": {
+                  "type": "array",
+                  "description": "Per-backend filters",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              },
+              "required": ["name", "port"]
+            }
+          }
+        }
+      }
+    },
+    "annotations": {
+      "type": "object",
+      "description": "Additional annotations for the HTTPRoute resource",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  }
+}

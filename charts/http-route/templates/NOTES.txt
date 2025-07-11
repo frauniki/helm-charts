@@ -1,0 +1,20 @@
+1. Get the HTTPRoute details by running these commands:
+{{- $fullName := include "http-route.fullname" . }}
+  kubectl describe httproute {{ $fullName }} -n {{ .Release.Namespace }}
+
+2. Verify the HTTPRoute is attached to the Gateway:
+  kubectl get httproute {{ $fullName }} -n {{ .Release.Namespace }} -o jsonpath='{.status.parents[*].conditions[*]}'
+
+3. Check the backend services referenced by this HTTPRoute:
+  {{- range .Values.rules }}
+  {{- range .backendRefs }}
+  kubectl get service {{ .name }}{{ if .namespace }} -n {{ .namespace }}{{ end }}
+  {{- end }}
+  {{- end }}
+
+{{- if .Values.hostnames }}
+4. This HTTPRoute will handle traffic for the following hostnames:
+  {{- range .Values.hostnames }}
+  - {{ . }}
+  {{- end }}
+{{- end }}

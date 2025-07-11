@@ -1,0 +1,71 @@
+# Default values for http-route.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# Parent Gateway references
+parentRefs:
+  - name: ""
+    namespace: ""
+    sectionName: ""
+    port: ""
+
+# Hostnames this HTTPRoute should match
+hostnames: []
+# - "example.com"
+# - "*.example.com"
+
+# Rules for routing traffic
+rules:
+  - matches:
+      - path:
+          type: PathPrefix
+          value: /
+        headers: []
+        # - name: X-Custom-Header
+        #   value: custom-value
+        queryParams: []
+        # - name: filter
+        #   value: active
+        method: ""
+    filters: []
+    # - type: RequestHeaderModifier
+    #   requestHeaderModifier:
+    #     set:
+    #       - name: X-Custom-Header
+    #         value: custom-value
+    #     add:
+    #       - name: X-Another-Header
+    #         value: another-value
+    #     remove:
+    #       - X-Remove-Header
+    # - type: URLRewrite
+    #   urlRewrite:
+    #     hostname: new.example.com
+    #     path:
+    #       type: ReplacePrefixMatch
+    #       replacePrefixMatch: /new-prefix
+    # - type: RequestRedirect
+    #   requestRedirect:
+    #     scheme: https
+    #     hostname: new.example.com
+    #     port: 443
+    #     statusCode: 301
+    # - type: RequestMirror
+    #   requestMirror:
+    #     backendRef:
+    #       name: mirror-service
+    #       port: 80
+    backendRefs:
+      - name: ""
+        namespace: ""
+        port: 80
+        weight: 1
+        filters: []
+        # - type: ResponseHeaderModifier
+        #   responseHeaderModifier:
+        #     set:
+        #       - name: X-Response-Header
+        #         value: response-value
+
+# Additional annotations for HTTPRoute
+annotations: {}
