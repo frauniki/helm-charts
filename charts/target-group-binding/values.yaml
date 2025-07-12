@@ -1,0 +1,33 @@
+# Default values for target-group-binding.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# Service reference configuration
+serviceRef:
+  name: ""
+  port: 80
+
+# Target Group ARN - required
+targetGroupARN: ""
+
+# Target type (instance or ip)
+targetType: "ip"
+
+# IP address type (ipv4 or ipv6)
+ipAddressType: "ipv4"
+
+# Networking configuration
+networking:
+  ingress:
+    - from:
+        - securityGroup:
+            groupID: ""
+      ports:
+        - protocol: tcp
+          port: 80
+
+# Additional annotations for TargetGroupBinding
+annotations: {}
+
+# Additional labels for TargetGroupBinding
+labels: {}

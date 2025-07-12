@@ -1,0 +1,14 @@
+1. Get the TargetGroupBinding details by running:
+  kubectl describe targetgroupbinding {{ include "target-group-binding.fullname" . }}
+
+2. Verify the binding status:
+  kubectl get targetgroupbinding {{ include "target-group-binding.fullname" . }} -o jsonpath='{.status}'
+
+3. Important notes:
+  - Ensure the AWS Load Balancer Controller is installed in your cluster
+  - The target group ARN must exist in your AWS account
+  - The service {{ .Values.serviceRef.name }} must exist in the same namespace
+  - Security group rules may need to be configured to allow traffic
+
+Target Group ARN: {{ .Values.targetGroupARN }}
+Service: {{ .Values.serviceRef.name }}:{{ .Values.serviceRef.port }}

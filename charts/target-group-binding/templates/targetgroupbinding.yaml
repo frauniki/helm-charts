@@ -1,0 +1,28 @@
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  name: {{ include "target-group-binding.fullname" . }}
+  labels:
+    {{- include "target-group-binding.labels" . | nindent 4 }}
+    {{- with .Values.labels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+  {{- with .Values.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  serviceRef:
+    name: {{ required "serviceRef.name is required" .Values.serviceRef.name }}
+    port: {{ .Values.serviceRef.port }}
+  targetGroupARN: {{ required "targetGroupARN is required" .Values.targetGroupARN }}
+  {{- if .Values.targetType }}
+  targetType: {{ .Values.targetType }}
+  {{- end }}
+  {{- if .Values.ipAddressType }}
+  ipAddressType: {{ .Values.ipAddressType }}
+  {{- end }}
+  {{- with .Values.networking }}
+  networking:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}

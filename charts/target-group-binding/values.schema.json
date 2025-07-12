@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["serviceRef", "targetGroupARN"],
+  "properties": {
+    "serviceRef": {
+      "type": "object",
+      "required": ["name", "port"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the Kubernetes Service"
+        },
+        "port": {
+          "type": "integer",
+          "description": "Port number of the Service",
+          "minimum": 1,
+          "maximum": 65535
+        }
+      }
+    },
+    "targetGroupARN": {
+      "type": "string",
+      "description": "ARN of the AWS Target Group",
+      "pattern": "^arn:aws[a-z\\-]*:elasticloadbalancing:"
+    },
+    "targetType": {
+      "type": "string",
+      "description": "Target type for the Target Group",
+      "enum": ["instance", "ip"],
+      "default": "ip"
+    },
+    "ipAddressType": {
+      "type": "string",
+      "description": "IP address type",
+      "enum": ["ipv4", "ipv6"],
+      "default": "ipv4"
+    },
+    "networking": {
+      "type": "object",
+      "properties": {
+        "ingress": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "securityGroup": {
+                      "type": "object",
+                      "properties": {
+                        "groupID": {
+                          "type": "string",
+                          "description": "Security Group ID"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "ports": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "protocol": {
+                      "type": "string",
+                      "enum": ["tcp", "udp"]
+                    },
+                    "port": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 65535
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "annotations": {
+      "type": "object",
+      "description": "Additional annotations for the TargetGroupBinding"
+    },
+    "labels": {
+      "type": "object",
+      "description": "Additional labels for the TargetGroupBinding"
+    }
+  }
+}

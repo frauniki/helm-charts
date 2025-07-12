@@ -1,0 +1,13 @@
+apiVersion: v2
+name: target-group-binding
+description: A Helm chart for AWS TargetGroupBinding
+version: 0.1.0
+keywords:
+  - aws
+  - alb
+  - targetgroupbinding
+  - elbv2
+sources:
+  - https://kubernetes-sigs.github.io/aws-load-balancer-controller/
+maintainers:
+  - name: frauniki
