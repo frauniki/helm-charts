@@ -30,12 +30,6 @@
       "enum": ["instance", "ip"],
       "default": "ip"
     },
-    "ipAddressType": {
-      "type": "string",
-      "description": "IP address type",
-      "enum": ["ipv4", "ipv6"],
-      "default": "ipv4"
-    },
     "networking": {
       "type": "object",
       "properties": {

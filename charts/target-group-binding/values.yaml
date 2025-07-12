@@ -13,9 +13,6 @@ targetGroupARN: ""
 # Target type (instance or ip)
 targetType: "ip"
 
-# IP address type (ipv4 or ipv6)
-ipAddressType: "ipv4"
-
 # Networking configuration
 networking:
   ingress:

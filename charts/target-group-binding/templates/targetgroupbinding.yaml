@@ -19,9 +19,6 @@ spec:
   {{- if .Values.targetType }}
   targetType: {{ .Values.targetType }}
   {{- end }}
-  {{- if .Values.ipAddressType }}
-  ipAddressType: {{ .Values.ipAddressType }}
-  {{- end }}
   {{- with .Values.networking }}
   networking:
     {{- toYaml . | nindent 4 }}
