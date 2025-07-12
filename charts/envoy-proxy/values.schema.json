@@ -2,11 +2,6 @@
   "$schema": "http://json-schema.org/schema#",
   "type": "object",
   "properties": {
-    "namespace": {
-      "type": "string",
-      "description": "Namespace where EnvoyProxy will be created",
-      "default": "envoy-gateway-system"
-    },
     "provider": {
       "type": "object",
       "description": "Provider configuration",

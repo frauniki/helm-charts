@@ -2,7 +2,6 @@ apiVersion: gateway.envoyproxy.io/v1alpha1
 kind: EnvoyProxy
 metadata:
   name: {{ include "envoy-proxy.fullname" . }}
-  namespace: {{ .Values.namespace }}
   labels:
     {{- include "envoy-proxy.labels" . | nindent 4 }}
   {{- with .Values.annotations }}

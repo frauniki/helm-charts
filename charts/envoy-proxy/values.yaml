@@ -2,9 +2,6 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-# Namespace where EnvoyProxy will be created
-namespace: envoy-gateway-system
-
 # Provider configuration
 provider:
   type: Kubernetes
