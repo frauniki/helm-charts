@@ -674,6 +674,23 @@ entries:
     version: 0.1.0
   target-group-binding:
   - apiVersion: v2
+    created: "2025-07-12T09:23:10.446400648Z"
+    description: A Helm chart for AWS TargetGroupBinding
+    digest: 35f4d089c779cf9f6c2830b9f76ba08f3759a9c9fbdc53dc1ef6e1e2352a1ed4
+    keywords:
+    - aws
+    - alb
+    - targetgroupbinding
+    - elbv2
+    maintainers:
+    - name: frauniki
+    name: target-group-binding
+    sources:
+    - https://kubernetes-sigs.github.io/aws-load-balancer-controller/
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/target-group-binding-0.4.0/target-group-binding-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
     created: "2025-07-12T09:19:46.540128039Z"
     description: A Helm chart for AWS TargetGroupBinding
     digest: 89a3dd4a6a3a0b020114b53079b4e98c569047cefe5761cdcd5163ef42d020a6
@@ -799,4 +816,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2025-07-12T09:19:46.540280677Z"
+generated: "2025-07-12T09:23:10.446495988Z"
