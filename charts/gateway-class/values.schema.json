@@ -32,7 +32,7 @@
           "description": "Namespace of the referent"
         }
       },
-      "required": ["name"]
+      "required": []
     },
     "annotations": {
       "type": "object",
