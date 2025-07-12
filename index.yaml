@@ -96,6 +96,22 @@ entries:
     version: 0.2.0
   gateway-class:
   - apiVersion: v2
+    created: "2025-07-12T08:13:22.450233845Z"
+    description: A Helm chart for Kubernetes Gateway API GatewayClass
+    digest: 80026c6666d411d08a6e1af2dc4ac06544158d5358ab7f92d77d63a29660e48e
+    keywords:
+    - gateway-api
+    - gateway-class
+    - networking
+    maintainers:
+    - name: frauniki
+    name: gateway-class
+    sources:
+    - https://github.com/kubernetes-sigs/gateway-api
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/gateway-class-0.3.1/gateway-class-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v2
     created: "2025-07-12T08:10:01.211804339Z"
     description: A Helm chart for Kubernetes Gateway API GatewayClass
     digest: 807e8549ce7ad65efff58dce323ac287334d37b393d9b5b0ffe0e620bf4b5fbd
@@ -655,4 +671,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2025-07-12T08:10:01.211926035Z"
+generated: "2025-07-12T08:13:22.450346357Z"
