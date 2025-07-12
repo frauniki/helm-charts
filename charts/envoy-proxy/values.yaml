@@ -3,67 +3,7 @@
 # Declare variables to be passed into your templates.
 
 # Provider configuration
-provider:
-  type: Kubernetes
-  kubernetes:
-    envoyDeployment:
-      replicas: 1
-      pod:
-        annotations: {}
-        labels: {}
-        affinity: {}
-        tolerations: []
-        # securityContext:
-        #   runAsUser: 1000
-        #   runAsGroup: 3000
-        #   fsGroup: 2000
-        # volumes:
-        #   - name: custom-volume
-        #     configMap:
-        #       name: custom-config
-        # initContainers:
-        #   - name: custom-init
-        #     image: busybox
-        #     command: ['sh', '-c', 'echo hello']
-      container:
-        # env:
-        #   - name: CUSTOM_ENV
-        #     value: custom-value
-        # image: envoyproxy/envoy:v1.27-latest
-        resources: {}
-        # limits:
-        #   cpu: 1000m
-        #   memory: 512Mi
-        # requests:
-        #   cpu: 100m
-        #   memory: 256Mi
-        # securityContext:
-        #   allowPrivilegeEscalation: false
-        #   readOnlyRootFilesystem: true
-        # volumeMounts:
-        #   - name: custom-volume
-        #     mountPath: /custom
-    envoyService:
-      type: LoadBalancer
-      annotations: {}
-      # loadBalancerClass: service.k8s.aws/nlb
-      # allocateLoadBalancerNodePorts: false
-      # loadBalancerSourceRanges:
-      #   - 10.0.0.0/8
-      # externalTrafficPolicy: Local
-    envoyHpa:
-      minReplicas: 1
-      maxReplicas: 10
-      metrics: []
-      # - type: Resource
-      #   resource:
-      #     name: cpu
-      #     target:
-      #       type: Utilization
-      #       averageUtilization: 80
-      # behavior:
-      #   scaleDown:
-      #     stabilizationWindowSeconds: 300
+provider: {}
 
 # Bootstrap configuration
 bootstrap: {}
@@ -85,26 +25,7 @@ extraArgs: []
 # - debug
 
 # Telemetry configuration
-telemetry:
-  metrics:
-    prometheus:
-      disable: false
-    sinks: []
-    # - type: OpenTelemetry
-    #   openTelemetry:
-    #     host: otel-collector.monitoring.svc.cluster.local
-    #     port: 4317
-  accessLog:
-    disable: false
-    settings: []
-    # - format:
-    #     type: Text
-    #     text: |
-    #       [%START_TIME%] "%REQ(:METHOD)% %REQ(X-ENVOY-ORIGINAL-PATH?:PATH)% %PROTOCOL%" %RESPONSE_CODE% %RESPONSE_FLAGS%
-    #   sinks:
-    #     - type: File
-    #       file:
-    #         path: /dev/stdout
+telemetry: {}
 
 # Shutdown configuration
 shutdown: {}
