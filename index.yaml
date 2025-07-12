@@ -59,6 +59,58 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/atlas-schema-0.1.0/atlas-schema-0.1.0.tgz
     version: 0.1.0
+  envoy-proxy:
+  - apiVersion: v2
+    created: "2025-07-12T08:10:00.857922177Z"
+    description: A Helm chart for Envoy Gateway EnvoyProxy configuration
+    digest: bf66fa3c6f4d7b25fa01e239e6f42a743e8d58723c358a6ebdd1f99f5b38d343
+    keywords:
+    - envoy-gateway
+    - envoy-proxy
+    - gateway-api
+    - networking
+    maintainers:
+    - name: frauniki
+    name: envoy-proxy
+    sources:
+    - https://github.com/envoyproxy/gateway
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/envoy-proxy-0.2.0/envoy-proxy-0.2.0.tgz
+    version: 0.2.0
+  gateway:
+  - apiVersion: v2
+    created: "2025-07-12T08:10:01.057149652Z"
+    description: A Helm chart for Kubernetes Gateway API Gateway
+    digest: 877eab4767d00cbee5b6139564ea32e63f8355a3302428e4e1351d0d069ff2f7
+    keywords:
+    - gateway-api
+    - gateway
+    - networking
+    maintainers:
+    - name: frauniki
+    name: gateway
+    sources:
+    - https://github.com/kubernetes-sigs/gateway-api
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/gateway-0.2.0/gateway-0.2.0.tgz
+    version: 0.2.0
+  gateway-class:
+  - apiVersion: v2
+    created: "2025-07-12T08:10:01.211804339Z"
+    description: A Helm chart for Kubernetes Gateway API GatewayClass
+    digest: 807e8549ce7ad65efff58dce323ac287334d37b393d9b5b0ffe0e620bf4b5fbd
+    keywords:
+    - gateway-api
+    - gateway-class
+    - networking
+    maintainers:
+    - name: frauniki
+    name: gateway-class
+    sources:
+    - https://github.com/kubernetes-sigs/gateway-api
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/gateway-class-0.3.0/gateway-class-0.3.0.tgz
+    version: 0.3.0
   generic-batch:
   - apiVersion: v2
     created: "2024-07-08T13:38:12.951545365Z"
@@ -603,4 +655,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2025-07-11T19:56:14.258140198Z"
+generated: "2025-07-12T08:10:01.211926035Z"
