@@ -14,14 +14,7 @@ targetGroupARN: ""
 targetType: "ip"
 
 # Networking configuration
-networking:
-  ingress:
-    - from:
-        - securityGroup:
-            groupID: ""
-      ports:
-        - protocol: tcp
-          port: 80
+networking: {}
 
 # Additional annotations for TargetGroupBinding
 annotations: {}
