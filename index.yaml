@@ -338,6 +338,22 @@ entries:
     version: 0.1.0
   http-route:
   - apiVersion: v2
+    created: "2025-07-12T08:22:00.95402342Z"
+    description: A Helm chart for Kubernetes Gateway API HTTPRoute
+    digest: 8926461f4e1461bb1d6d7302064651c3447141148dbccd0982386c827ca87286
+    keywords:
+    - gateway-api
+    - httproute
+    - networking
+    maintainers:
+    - name: frauniki
+    name: http-route
+    sources:
+    - https://github.com/kubernetes-sigs/gateway-api
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/http-route-0.2.0/http-route-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     created: "2025-07-11T19:56:14.25801318Z"
     description: A Helm chart for Kubernetes Gateway API HTTPRoute
     digest: 6ef07cb23a80858894270a3b054b3f419e5bbdbe6b75e8f609db4b24a630dc91
@@ -697,4 +713,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2025-07-12T08:17:22.867112488Z"
+generated: "2025-07-12T08:22:00.954117688Z"
