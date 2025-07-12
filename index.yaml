@@ -61,6 +61,23 @@ entries:
     version: 0.1.0
   envoy-proxy:
   - apiVersion: v2
+    created: "2025-07-12T08:31:39.4373511Z"
+    description: A Helm chart for Envoy Gateway EnvoyProxy configuration
+    digest: 717e2a796fce3829c6878b258a1cf36b09cdf163e7fd5662fb5bcc9befbc48c5
+    keywords:
+    - envoy-gateway
+    - envoy-proxy
+    - gateway-api
+    - networking
+    maintainers:
+    - name: frauniki
+    name: envoy-proxy
+    sources:
+    - https://github.com/envoyproxy/gateway
+    urls:
+    - https://github.com/frauniki/helm-charts/releases/download/envoy-proxy-0.4.1/envoy-proxy-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v2
     created: "2025-07-12T08:26:30.956458667Z"
     description: A Helm chart for Envoy Gateway EnvoyProxy configuration
     digest: ab9680fcbf3f84b003538e713c7b7d8c427d41392a5189d47f20e1b5075d15c4
@@ -730,4 +747,4 @@ entries:
     urls:
     - https://github.com/frauniki/helm-charts/releases/download/unbound-1.1.5/unbound-1.1.5.tgz
     version: 1.1.5
-generated: "2025-07-12T08:26:30.956580727Z"
+generated: "2025-07-12T08:31:39.437477437Z"
